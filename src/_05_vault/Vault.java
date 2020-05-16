@@ -1,5 +1,7 @@
 package _05_vault;
 
+import java.util.Random;
+
 public class Vault {
 
 	public static void main(String[] args) {
@@ -12,7 +14,10 @@ public class Vault {
 		}
 	}
 	int secret;
-	Vault(int mysecret){
+	public Vault() {
+		secret=(new Random()).nextInt(1_000_001);
+	}
+	public Vault(int mysecret){
 		secret = mysecret;
 	}
 
